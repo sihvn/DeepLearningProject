@@ -6,7 +6,7 @@ authors = ["wangsiyang68 <siyang.official@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = ">=3.9"
 pandas = "^2.2.1"
 
 
