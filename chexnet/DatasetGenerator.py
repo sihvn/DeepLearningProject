@@ -58,7 +58,7 @@ class DatasetGenerator (Dataset):
         
         if self.transform != None: imageData = self.transform(imageData)
         
-        return imageData, imageLabel
+        return imageData, imageLabel,imagePath
         
     #-------------------------------------------------------------------------------- 
     
