@@ -9,7 +9,7 @@ poetry install
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
 
-Run `python .\main.py` to check if it is working. Took ~8 mins to run on my 3060
+Run `python .\main.py` to check if the DenseNet model is working. Took ~8 mins to run on my 3060
 
 Download the dataset from here: https://nihcc.app.box.com/v/ChestXray-NIHCC/folder/37178474737
 
