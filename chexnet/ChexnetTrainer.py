@@ -253,7 +253,7 @@ class ChexnetTrainer ():
        
         model.eval()
         print('before enumeration begins')
-        for i, (input, target) in enumerate(dataLoaderTest):
+        for i, (input, target, _) in enumerate(dataLoaderTest):
             # print(i)
             target = target.cuda()
             outGT = torch.cat((outGT, target), 0)
