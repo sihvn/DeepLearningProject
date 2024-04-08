@@ -23,10 +23,10 @@ class DatasetGenerator (Dataset):
         
         #---- get into the loop
         line = True
-        # limit = 100
-        # i = 0
-        # while line and i < limit:
-        while line:
+        limit = 2048
+        i = 0
+        while line and i < limit:
+        # while line:
                 
             line = fileDescriptor.readline()
             
@@ -42,11 +42,11 @@ class DatasetGenerator (Dataset):
                 self.listImagePaths.append(imagePath)
                 self.listImageLabels.append(imageLabel)   
 
-            # i += 1
+            i += 1
             
         fileDescriptor.close()
 
-        # print(f"Collected {i} images from {pathDatasetFile}")
+        print(f"Collected {i} images from {pathDatasetFile}")
     #-------------------------------------------------------------------------------- 
     
     def __getitem__(self, index):
