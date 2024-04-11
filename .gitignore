@@ -1,6 +1,9 @@
 # Dataset is 45 GB please download from here https://www.kaggle.com/datasets/nih-chest-xrays/data
 raw_data/
 
+# Untrack any saved model weights from experiments
+notebooks/dnet_models/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
