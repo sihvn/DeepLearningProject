@@ -1,0 +1,17 @@
+Collected 2048 images from ../chexnet/dataset/test_1.txt
+before enumeration begins
+AUROC mean  0.587459551740243
+Atelectasis   0.6360428563878116
+Cardiomegaly   0.5892516631411141
+Effusion   0.5505372396266571
+Infiltration   0.5586687615342412
+Mass   0.540452518275099
+Nodule   0.5555976667494371
+Pneumonia   0.547042147042147
+Pneumothorax   0.5987767980636237
+Consolidation   0.6267018779342722
+Edema   0.7188941040843214
+Emphysema   0.5541299587699834
+Fibrosis   0.5202079811158251
+Pleural_Thickening   0.658110524553492
+Hernia   0.5700196270853778
