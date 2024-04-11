@@ -12,7 +12,7 @@ class PneumoniaDataset(Dataset):
 
         self.data_dir = data_dir
         self.transform = transform
-        self.labels_df = pd.read_excel(label_file)
+        self.labels_df = pd.read_csv(label_file)
         #if label contains Pneumothorax = 1 else 0 
         self.labels_df['Pneumothorax'] = self.labels_df['Finding Labels'].apply(lambda x: 1 if 'Pneumothorax' in x.split('|') else 0)
 
@@ -76,7 +76,7 @@ def get_data_loaders(data_dir, label_file,batch_size=16, val_split=0.1,  test_sp
     
     return train_dataset,val_dataset,train_loader,val_loader,test_dataset,test_loader
 
-train_dataset, val_dataset,train_loader, val_loader,test_dataset, test_loader= get_data_loaders(data_dir='../raw_data/archive/', label_file='../raw_data/archive/CXR8-selected/Data_Entry_2017_v2020.xlsx')
+train_dataset, val_dataset,train_loader, val_loader,test_dataset, test_loader= get_data_loaders(data_dir='../raw_data/archive/', label_file='../raw_data/archive/CXR8-selected/Data_Entry_2017_v2020.csv')
 
 print(f"Training Dataset Size: {len(train_dataset)}")
 print(f"Validation Dataset Size: {len(val_dataset)}")
