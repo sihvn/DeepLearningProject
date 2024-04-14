@@ -58,7 +58,7 @@ Run all cells in **evaluation.ipynb**  to get the F1 score on the held-out test 
 
   | Learning Rate | Batch Size | Optimizer | Criterion | Epochs | Train F1 Score | Validation F1 Score | Test F1 Score |
 |-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
-| 1e-4  | 16  | Adam  | BCELoss  | ?  | ?  | ?  | ?  |
+| 1e-4  | 16  | Adam  | BCELoss  | 50 | 0.61  | 0.60  | 0.59  |
 
 # Project Report
 
