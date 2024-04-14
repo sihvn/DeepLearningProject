@@ -13,6 +13,8 @@ Download the dataset from [here](https://nihcc.app.box.com/v/ChestXray-NIHCC/fol
 # To setup environment:
 
 ```
+python -m venv .venv
+.venv\Scripts\activate
 pip3 install torch torchvision tensorboard torch-lr-scheduler glob2 pillow pandas
 ```
 
@@ -74,8 +76,15 @@ Run all cells in **evaluation.ipynb**  to get the F1 score on the held-out test 
 ├── notebooks 
 |   ├── evaluation.ipynb
 |   ├── trainer.ipynb
+|   ├── runs (which contains all the experiment data)
 ├── raw_data
 |   ├── archive
 |   |   ├── images_001
 |   |   ├── etc...
 ```
+To start Tensorboard
+```
+cd notebooks
+tensorboard --logdir=runs
+```
+
