@@ -32,7 +32,7 @@ def train(model,
     val_writer = SummaryWriter(log_dir=f".//runs//{model_name}_val")
 
     # Train the model
-    n_epochs = 5
+    n_epochs = 50
     bs = train_loader.batch_size
     conf_threshold = 1/num_class
     lossMIN = 100000

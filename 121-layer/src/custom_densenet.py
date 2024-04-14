@@ -27,7 +27,7 @@ class dense_layer(nn.Module):
         )
         
     def forward(self, x):
-        dropout_rate = 0.2
+        dropout_rate = 0
         return F.dropout(self.net(x), p = dropout_rate, training=self.training)  
 
 class dense_block(nn.ModuleDict):
