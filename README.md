@@ -62,7 +62,7 @@ Run all cells in **evaluation.ipynb**  to get the F1 score on the held-out test 
 
 # Project Report
 
-[Report]()
+[Report](https://github.com/sihvn/DeepLearningProject/blob/main/DL%20Project.pdf)
 
 # Project Directory:  
 
