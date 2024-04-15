@@ -264,7 +264,7 @@ def get_data_loaders(data_dir, label_file,batch_size=16, val_split=0.1,  test_sp
     train_size = len(dataset) - val_size - test_size
     
     # Split the dataset into training, validation, and test sets
-    train_dataset, test_dataset, val_dataset = random_split(dataset, [train_size, test_size, val_size])
+    train_dataset, test_dataset, val_dataset = random_split(dataset, [train_size, test_size, val_size], generator=torch.Generator().manual_seed(42))
     
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
