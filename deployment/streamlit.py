@@ -105,6 +105,14 @@ if st.button('Next Batch'):
 ## setup streamlit data
 images, pred_labels, labels = process_data(model, batch, conf)
 tp_count, fp_count, fn_count, tn_count = calculate_stats(pred_labels, labels)
+
+precision = tp_count / (tp_count + fp_count) if (tp_count + fp_count) != 0 else 0
+recall = tp_count / (tp_count + fn_count) if (tp_count + fn_count) != 0 else 0
+f1_score = 2 * (precision * recall) / (precision + recall) if (precision + recall) != 0 else 0
+
+st.write(f"Precision: :{"green" if precision >= 0.5 else "red"}[{precision:.2f}], \
+           Recall: :{"green" if recall > 0.5 else "red"}[{recall:.2f}], \
+           F1 Score: :{"green" if f1_score > 0.5 else "red"}[{f1_score:.2f}]")
 st.write(f":green[True Positives: {tp_count}, True Negatives: {tn_count}]")
 st.write(f":red[False Positives: {fp_count}, False Negatives: {fn_count}]")
 display_batch(images, pred_labels, labels)
